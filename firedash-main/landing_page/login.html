@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(34, 34, 34);
+            flex-direction: column;
+        }
+
+        h2 {
+            color: rgb(57, 245, 184);;
+        }
+
+        h4 {
+            color: #fff;
+        }
+        
+        .login-container {
+            background-image: linear-gradient(180deg,rgb(26, 68, 54),rgb(34, 34, 34) );
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #949494;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(34, 34, 34);
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: rgb(57, 245, 184);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <a href="./index.html"><img src="./components/image/firedash-logo.svg" alt="logo" style="width: 350px;"></a>
+            <h4 style="margin-left: 70px;">O seu hub de investimentos</h4>
+        </div>
+    </header>
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <form action="login_process.php" method="POST">
+            <input type="text" name="username" placeholder="Nome de usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
